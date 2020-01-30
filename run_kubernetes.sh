@@ -8,7 +8,7 @@ dockerpath=rhotimee/ml-api
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run ml-api --image=rhotimee/ml-api --port=80
+kubectl run ml-api --image=$dockerpath:v1 --port=80
 
 
 # Step 3:

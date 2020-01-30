@@ -11,8 +11,9 @@ dockerpath=rhotimee/ml-api
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker image tag ml-api $dockerpath
+docker login --username rhotimee
+docker image tag ml-api $dockerpath:v1
 
 # Step 3:
 # Push image to a docker repository
-docker push $dockerpath
+docker push $dockerpath:v1
